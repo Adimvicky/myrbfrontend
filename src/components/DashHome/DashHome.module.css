@@ -1,0 +1,21 @@
+
+.botCard {
+  background: url(../../assets/img/bg-blue-card-1.svg) no-repeat;
+  width: 380px;
+  background-size: cover;
+  background-position: bottom;
+  font-size : 13px;
+}
+
+.search {
+  position: relative;
+}
+.search__icon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left : 12px;
+  transform: translate(50%,-50%);
+  filter: invert(40%) sepia(15%) saturate(638%) hue-rotate(192deg) brightness(99%) contrast(91%);
+}

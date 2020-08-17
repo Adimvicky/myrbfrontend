@@ -1,0 +1,32 @@
+[
+  {
+    "currencies":"BTC/USD",
+    "rate":"9581",
+    "change":-25.16,
+    "percentage":-0.12
+  },
+  {
+    "currencies":"BTC/USD",
+    "rate":"9581",
+    "change":25.16,
+    "percentage":0.12
+  },
+  {
+    "currencies":"BTC/USD",
+    "rate":"9581",
+    "change":-25.16,
+    "percentage":0.12
+  },
+  {
+    "currencies":"BTC/USD",
+    "rate":"9581",
+    "change":-25.16,
+    "percentage":0.12
+  },
+  {
+    "currencies":"BTC/USD",
+    "rate":"9581",
+    "change":25.16,
+    "percentage":0.12
+  }
+]

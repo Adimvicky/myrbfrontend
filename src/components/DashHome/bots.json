@@ -1,0 +1,37 @@
+[
+  {
+    "name":"My seed round bot",
+    "tradingPair":"ETH/BTC",
+    "icon": "piggy",
+    "color":"blue",
+    "returns":"100%"
+  },
+  {
+    "name":"My seed round bot",
+    "tradingPair":"ETH/BTC",
+    "icon": "hand",
+    "color":"green",
+    "returns":"100%"
+  },
+  {
+    "name":"My seed round bot",
+    "tradingPair":"ETH/BTC",
+    "icon": "hand",
+    "color":"green",
+    "returns":"100%"
+  },
+  {
+    "name":"My seed round bot",
+    "tradingPair":"ETH/BTC",
+    "icon": "hand",
+    "color":"green",
+    "returns":"100%"
+  },
+  {
+    "name":"My seed round bot",
+    "tradingPair":"ETH/BTC",
+    "icon": "hand",
+    "color":"green",
+    "returns":"100%"
+  }
+]
