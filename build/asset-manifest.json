@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.17b66461.chunk.css",
+    "main.css": "./static/css/main.3ffb95b8.chunk.css",
     "main.js": "./static/js/main.f744341a.chunk.js",
     "main.js.map": "./static/js/main.f744341a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3b88d4ec.js",
@@ -8,9 +8,9 @@
     "static/js/2.94a0b079.chunk.js": "./static/js/2.94a0b079.chunk.js",
     "static/js/2.94a0b079.chunk.js.map": "./static/js/2.94a0b079.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.3fdaff56cb7e12aaa1fb4df12ceadae8.js": "./precache-manifest.3fdaff56cb7e12aaa1fb4df12ceadae8.js",
+    "precache-manifest.f7313aa4905484c339ff07558f919b99.js": "./precache-manifest.f7313aa4905484c339ff07558f919b99.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.17b66461.chunk.css.map": "./static/css/main.17b66461.chunk.css.map",
+    "static/css/main.3ffb95b8.chunk.css.map": "./static/css/main.3ffb95b8.chunk.css.map",
     "static/js/2.94a0b079.chunk.js.LICENSE.txt": "./static/js/2.94a0b079.chunk.js.LICENSE.txt",
     "static/media/DashHome.module.css": "./static/media/bg-blue-card-1.eb544e55.svg",
     "static/media/bitcoin.svg": "./static/media/bitcoin.b9b38593.svg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.3b88d4ec.js",
     "static/js/2.94a0b079.chunk.js",
-    "static/css/main.17b66461.chunk.css",
+    "static/css/main.3ffb95b8.chunk.css",
     "static/js/main.f744341a.chunk.js"
   ]
 }
