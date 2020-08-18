@@ -10,32 +10,34 @@ const LiveTrader = (props) => {
         <h3 className="h3"> <Link to="/dashboard">&larr;</Link> <span>Live Trader</span></h3>
       </div>
       <div>
-        <div className="mx-auto my-20">
+        <div className="mx-auto my-8 -mx-20 p-20 custom-bg-dark--4">
           -- Graphs here --
         </div>
-        <div className="flex my-8">
-          <div className="w-3/5 flex-1 justify-between items-center mb-6 mr-10">
+        <div className="flex mb-8">
+          <div className="w-3/5 flex-1 justify-between items-center mr-10 p-20 custom-bg-dark--4">
             <div className="w-full">
               -- Candlestick Chart here --
             </div>
           </div>
           <div className="flex-1 shadow-light rounded overflow-hidden" style={{maxWidth : '450px'}}>
-            <div className="w-full">
+            <div className="w-full text-dark-200">
               <div className="custom-bg-dark--4 p-6">
                 Bot details
               </div>
               <div className="p-6">
                 <label className="text-13 text-dark-200 mb-2 inline-block">Pick a bot that was trained on this epic</label>
-                <select className="input input--dark text-white text-opacity-50 mb-6">
+                <select className="input input--dark text-dark-200 mb-6">
                   <option>Select bot</option>
                   <option>Bot 1</option>
                 </select>
-                <button className="btn btn-lg btn-purple-bright mx-auto block">start selected bot</button>
+                <div className="text-center">
+                  <button className="btn btn-lg btn-purple-bright mx-auto">start selected bot</button>
+                </div>
               </div>
               <div className="px-6 py-8 custom-bg-dark--4">
                 <div>
                   <label className="text-13 text-dark-200 mb-2 inline-block">Order type</label>
-                  <select className="input input--dark mb-4">
+                  <select className="input input--dark text-dark-200 mb-4">
                     <option>Select order type</option>
                     <option>Bot 1</option>
                   </select>
@@ -54,7 +56,7 @@ const LiveTrader = (props) => {
         </div>
         </div>
         <div>
-          <h4 className="text-base text-white">Trading Performance</h4>
+          <h4 className="text-base text-white mb-6">Trading Performance</h4>
           <PerformanceTable />
         </div>
     </div>

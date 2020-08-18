@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {font-family: "Circular Std Book";
   src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot"); /* IE9*/
   src: url("https://db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
@@ -40,6 +44,8 @@
   --color-primary--1 : #160831;
   --color-primary--2 : #180836;
 }
+
+
 body {
   font-family : "Hero New";
   font-size : 14px;
@@ -70,6 +76,11 @@ body {
   text-transform: uppercase;
   box-shadow: 0px 3px 6px #00000029;
   color: var(--color-white);
+  display: inline-block;
+}
+
+button:focus, button:active {
+  outline: none;
 }
 
 .btn-xs {
@@ -119,6 +130,13 @@ body {
   background: rgba(242, 155, 36,.8)
 }
 
+.btn-text {
+
+}
+.btn-text-blue {
+  color: #2843B4;
+}
+
 [class*="btn-action-"] {
   position: relative;
 }
@@ -148,6 +166,9 @@ body {
 }
 .b-b-lighter--2 {
   border-bottom : 2px solid #ebebeb;
+}
+.b-b-lighter--3 {
+  border-bottom: 1px solid rgba(255,255,255,.07);
 }
 .b-r-lighter {
   border-right : 2px solid #ebebeb;
@@ -186,6 +207,7 @@ tr.b-b-lighter:last-child {
 
 .active-dot {
   position : relative;
+  color : var(--unnamed-color-6E28B4);
 }
 .active-dot::after {
   content : "";
@@ -197,6 +219,20 @@ tr.b-b-lighter:last-child {
   border-radius: 50%;
   background: var(--unnamed-color-6E28B4);
 }
+.active-dot img {
+  filter: invert(18%) sepia(55%) saturate(4548%) hue-rotate(264deg) brightness(86%) contrast(54%);
+}
+
+.custom-bg-dark--2 .active-dot img {
+  filter : invert(56%) sepia(47%) saturate(3960%) hue-rotate(237deg) brightness(99%) contrast(104%);
+}
+.custom-bg-dark--2 .active-dot {
+  color: #CB6AFF;
+}
+.custom-bg-dark--2 .active-dot::after {
+  background: #CB6AFF;
+}
+
 
 .input {
   box-shadow: 0px 1px 4px #3F3F4419;
@@ -204,6 +240,9 @@ tr.b-b-lighter:last-child {
   display: inline-block;
   padding: 8px 16px;
   width: 100%;
+}
+.input:focus {
+  outline:2px solid rgba(18, 30, 83,.1);
 }
 .input--dark {
   opacity: .5;
@@ -259,4 +298,39 @@ select option {
   left : 12px;
   transform: translate(50%,-50%);
   filter: invert(40%) sepia(15%) saturate(638%) hue-rotate(192deg) brightness() contrast(91%);
+}
+
+.dash-body {
+  margin-top : 110px;
+}
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 500;
+}
+
+
+/* FAQ Accordion styles */
+.collapseSign {
+  border-radius : 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2C3149;
+  color: #2C3149;
+  position: relative;
+  display: inline-block;
+}
+.Collapsible__trigger .collapseSign::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.Collapsible__trigger.is-closed .collapseSign::before {
+  content: "\002b";
+}
+.Collapsible__trigger.is-open .collapseSign::before {
+  content: "\2013";
 }

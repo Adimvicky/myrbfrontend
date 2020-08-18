@@ -15,7 +15,7 @@ const DashHeader = (props) => {
   let isDarkPage = url.includes('/dashboard/bot') || url.includes('/dashboard/trader');
 
   return (
-    <header className={`${header} ${isDarkPage ? 'custom-bg-dark--2' : ''}`}>
+    <header className={`${header} ${isDarkPage ? 'custom-bg-dark--2' : 'bg-white'} fixed-top`}>
       <ul className={`px-20 py-4 flex items-center justify-between h-full text-dark-200 ${isDarkPage ? 'b-b-lighter' : 'b-b-light'}`}>
         <li><Link to="/">MYRB</Link></li>
         <li className="flex items-center">
@@ -43,10 +43,16 @@ const DashHeader = (props) => {
               <span>Live trader</span>
             </NavLink>
           </li>
-          <li className="flex items-center">
+          <li className="flex items-center mr-12">
             <NavLink to="/dashboard/how" activeClassName="active-dot" className="flex items-center">
               <img className="mr-3" src={profileImg}></img>
               <span>How-to</span>
+            </NavLink>
+          </li>
+          <li className="flex items-center">
+            <NavLink to="/dashboard/account" activeClassName="active-dot" className="flex items-center">
+              <img className="mr-3" src={profileImg}></img>
+              <span>My Account</span>
             </NavLink>
           </li>
           <li className="ml-auto">

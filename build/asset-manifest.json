@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.3ffb95b8.chunk.css",
-    "main.js": "./static/js/main.f744341a.chunk.js",
-    "main.js.map": "./static/js/main.f744341a.chunk.js.map",
+    "main.css": "./static/css/main.cf3a16de.chunk.css",
+    "main.js": "./static/js/main.c3774247.chunk.js",
+    "main.js.map": "./static/js/main.c3774247.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3b88d4ec.js",
     "runtime-main.js.map": "./static/js/runtime-main.3b88d4ec.js.map",
-    "static/js/2.94a0b079.chunk.js": "./static/js/2.94a0b079.chunk.js",
-    "static/js/2.94a0b079.chunk.js.map": "./static/js/2.94a0b079.chunk.js.map",
+    "static/js/2.144a0305.chunk.js": "./static/js/2.144a0305.chunk.js",
+    "static/js/2.144a0305.chunk.js.map": "./static/js/2.144a0305.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.f7313aa4905484c339ff07558f919b99.js": "./precache-manifest.f7313aa4905484c339ff07558f919b99.js",
+    "precache-manifest.f1557c31847eedd0b0c053ef1aa337fd.js": "./precache-manifest.f1557c31847eedd0b0c053ef1aa337fd.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.3ffb95b8.chunk.css.map": "./static/css/main.3ffb95b8.chunk.css.map",
-    "static/js/2.94a0b079.chunk.js.LICENSE.txt": "./static/js/2.94a0b079.chunk.js.LICENSE.txt",
+    "static/css/main.cf3a16de.chunk.css.map": "./static/css/main.cf3a16de.chunk.css.map",
+    "static/js/2.144a0305.chunk.js.LICENSE.txt": "./static/js/2.144a0305.chunk.js.LICENSE.txt",
     "static/media/DashHome.module.css": "./static/media/bg-blue-card-1.eb544e55.svg",
     "static/media/bitcoin.svg": "./static/media/bitcoin.b9b38593.svg",
     "static/media/collecting-2.svg": "./static/media/collecting-2.f98046e9.svg",
@@ -22,13 +22,14 @@
     "static/media/hourglass.svg": "./static/media/hourglass.64272dde.svg",
     "static/media/ic-dash.svg": "./static/media/ic-dash.a4cb180d.svg",
     "static/media/ic-profile.svg": "./static/media/ic-profile.5853d362.svg",
+    "static/media/ic-success-alt-big.svg": "./static/media/ic-success-alt-big.1ccede1d.svg",
     "static/media/piggy_bank.svg": "./static/media/piggy_bank.f024a283.svg",
     "static/media/search-solid.svg": "./static/media/search-solid.c6a0effb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3b88d4ec.js",
-    "static/js/2.94a0b079.chunk.js",
-    "static/css/main.3ffb95b8.chunk.css",
-    "static/js/main.f744341a.chunk.js"
+    "static/js/2.144a0305.chunk.js",
+    "static/css/main.cf3a16de.chunk.css",
+    "static/js/main.c3774247.chunk.js"
   ]
 }

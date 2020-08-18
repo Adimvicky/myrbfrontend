@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { LayoutContext } from '../Layout/Layout';
 import { hero, hero__illustration } from './Hero.module.css';
 
 const Hero = () => {
+  const { openModal } = useContext(LayoutContext);
+
   return (
     <main className={`${hero} px-20 flex items-center justify-between`}>
       <div>
@@ -11,8 +15,8 @@ const Hero = () => {
           Junk MTV quiz graced by fox whelps. Bawds jog
         </p>
         <div>
-          <button className="btn btn-lg btn-green mr-4">Get started</button>
-          <button className="btn btn-lg btn-dark">Learn more</button>
+          <button onClick={() => openModal('signup')} className="btn btn-lg btn-green mr-4">Get started</button>
+          <Link to="/about" className="btn btn-lg btn-dark">Learn more</Link>
         </div>
       </div>
       <div className="mr-10">

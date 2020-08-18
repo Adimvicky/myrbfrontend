@@ -41,7 +41,7 @@ const Bot = (props) => {
       </div>
       <div className="flex">
         <div className="w-3/5 flex-1 justify-between items-center mb-6 mr-10">
-          <div className="my-12">
+          <div className="mb-8 p-20 custom-bg-dark--4">
             -- Chart here --
           </div>
           <BotTable data={performanceData}/>

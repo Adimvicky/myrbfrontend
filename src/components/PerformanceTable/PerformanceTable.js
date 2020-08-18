@@ -4,7 +4,7 @@ import { table } from './PerformanceTable.module.css';
 
 const Table = (props) => {
   return (
-    <table className={`${table} mx-auto my-8 w-full uppercase`}>
+    <table className={`${table} mx-auto w-full uppercase`}>
       <thead>
         <tr className="text-xs text-dark-200 custom-bg-dark--4">
           <th className="text-left pl-8">Date</th>

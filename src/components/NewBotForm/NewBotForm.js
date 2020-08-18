@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { formCard } from './NewBotForm.module.css';
 import { Link, Switch, Route } from 'react-router-dom';
+import { LayoutContext } from '../Layout/Layout';
+
 
 const NewBotForm1 = (props) => {
   return (
@@ -60,6 +62,7 @@ const NewBotForm1 = (props) => {
 }
 
 const NewBotForm2 = (props) => {
+  const { openModal } = useContext(LayoutContext);
   return (
     <div className={`${formCard} px-6 py-8`}>
       <form>
@@ -106,7 +109,7 @@ const NewBotForm2 = (props) => {
         </div>
         <div className="text-right mt-5">
           <Link to="/dashboard/new-bot" className="btn btn-purple-outline btn-xs">Go back</Link>
-          <button className="btn btn-purple btn-xs inline-block ml-4">Make me money</button>
+          <button type="button" onClick={() => openModal('bot-creation-success')} className="btn btn-purple btn-xs inline-block ml-4">Make me money</button>
         </div>
       </form>
     </div>

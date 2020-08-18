@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../components/Layout/Layout';
+import { Layout, LayoutContext } from '../../components/Layout/Layout';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer';
 import FAQ from '../../components/FAQ/FAQ';
