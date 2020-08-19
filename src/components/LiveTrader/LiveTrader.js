@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PerformanceTable from '../PerformanceTable/PerformanceTable';
+import { LineChart, CandleStickGraph } from '../Chart/Chart';
 
 const LiveTrader = (props) => {
   return (
@@ -10,13 +11,16 @@ const LiveTrader = (props) => {
         <h3 className="h3"> <Link to="/dashboard">&larr;</Link> <span>Live Trader</span></h3>
       </div>
       <div>
-        <div className="mx-auto my-8 -mx-20 p-20 custom-bg-dark--4">
-          -- Graphs here --
+        <div className="mx-auto my-8 flex -mx-20 custom-bg-dark--4">
+          <LineChart />
+          <LineChart />
+          <LineChart />
+          <LineChart />
         </div>
         <div className="flex mb-8">
           <div className="w-3/5 flex-1 justify-between items-center mr-10 p-20 custom-bg-dark--4">
             <div className="w-full">
-              -- Candlestick Chart here --
+              <CandleStickGraph />
             </div>
           </div>
           <div className="flex-1 shadow-light rounded overflow-hidden" style={{maxWidth : '450px'}}>
@@ -62,5 +66,8 @@ const LiveTrader = (props) => {
     </div>
   )
 }
+
+
+
 
 export default LiveTrader;
