@@ -3,6 +3,7 @@ import UserImage from '../UserImage/UserImage';
 import { Link, NavLink } from 'react-router-dom';
 import profileImg from '../../assets/img/ic-profile.svg';
 import dashImg from '../../assets/img/ic-dash.svg';
+import accountImg from '../../assets/img/ic-my-account.svg';
 import { header } from './DashHeader.module.css';
 
 let user = {
@@ -51,7 +52,7 @@ const DashHeader = (props) => {
           </li>
           <li className="flex items-center">
             <NavLink to="/dashboard/account" activeClassName="active-dot" className="flex items-center">
-              <img className="mr-3" src={profileImg}></img>
+              <img className="mr-3" src={accountImg}></img>
               <span>My Account</span>
             </NavLink>
           </li>

@@ -10,6 +10,7 @@ const Layout = (props) => {
   const [ signUpModalOpen, setSignUpModalOpen ] = useState(false);
   const [ passwordResetModalOpen, setPasswordResetModalOpen ] = useState(false);
   const [ botCreationSuccessModalOpen, setBotCreationSuccessModalOpen ] = useState(false);
+  const [ botDeletionModalOpen, setBotDeletionModalOpen ] = useState(false);
 
   const openModal = (type) => {
     switch(type){
@@ -25,6 +26,9 @@ const Layout = (props) => {
       case 'bot-creation-success':
         setBotCreationSuccessModalOpen(true);
         return closeOtherModals('bot-creation-success');
+      case 'delete-bot':
+        setBotDeletionModalOpen(true);
+        return closeOtherModals('delete-bot')
       default:
         return;
     }
@@ -39,12 +43,14 @@ const Layout = (props) => {
         return setPasswordResetModalOpen(false);
       case 'bot-creation-success':
         return setBotCreationSuccessModalOpen(false);
+      case 'delete-bot':
+        return setBotDeletionModalOpen(false);
       default:
         return;
     }
   }
   function closeOtherModals(type){
-    let modals = ['login','signup','password-reset'];
+    let modals = ['login','signup','password-reset','bot-creation-success','delete-bot'];
     for(let modal of modals){
       if(!(modal == type)){
         closeModal(modal);
@@ -60,6 +66,7 @@ const Layout = (props) => {
         <SignUpModal open={signUpModalOpen} closeModal={() => closeModal('signup')} />
         <PasswordResetModal open={passwordResetModalOpen} closeModal={() => closeModal('password-reset')} />
         <BotCreationSuccessModal open={botCreationSuccessModalOpen} closeModal={() => closeModal('bot-creation-success')} />
+        <DeleteBotModal open={botDeletionModalOpen} closeModal={() => closeModal('delete-bot')} />
       </div>
     </LayoutContext.Provider>
   )
@@ -184,6 +191,28 @@ function BotCreationSuccessModal(props){
           <img className={`${successImage} mb-8`} src={successImg} alt="Success alt image"/>
           <Link to="/dashboard/trader" onClick={props.closeModal} className="btn btn-xs btn-purple mb-6">view bot in action</Link>
           <Link to="/dashboard" onClick={props.closeModal} className="btn-text uppercase text-dark-400">Back Home</Link>
+        </div>
+      </div>
+    </div>
+  </div>
+  )
+}
+
+function DeleteBotModal(props){
+  const { openModal } = React.useContext(LayoutContext);
+
+  return props.open && (
+    <div className={`${modalOverlay} text-dark-200`}>
+    <div className={`${modal} ${modalWhite}`}>
+      <div className={modalHeader}>
+        <h5 className="text-base text-dark-400"></h5>
+        <button onClick={props.closeModal} className={modalClose}>X</button>
+      </div>
+      <div className="px-6 pt-6 pb-10">
+        <h3 className="h3 text-dark-300 mb-10 text-center">Type the name of the bot to confirm deletion “My first bot"</h3>
+        <div className="mb-5 text-center">
+          <input type="email" className="input mb-10" placeholder="Enter bot name"></input>
+          <button className="btn btn-xs btn-red-white">Delete bot</button>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import BotTable from '../BotTable/BotTable';
+import { LayoutContext } from '../Layout/Layout';
 
 import botDetails from './bot-details.json';
 import performanceData from './performance-data.json';
@@ -8,6 +9,8 @@ import trainingDetails from './training-details.json'
 
 
 const Bot = (props) => {
+  const { openModal } = useContext(LayoutContext);
+
   const [training, setTraining] = useState(false);
   const handleStartTraining = () => {
     setTraining(true);
@@ -25,8 +28,6 @@ const Bot = (props) => {
     </button>
   )
 
-
-
   return (
     <div className={`custom-bg-dark--3 px-20 py-12 text-white`}>
       <p className="mb-4 ml-8 text-13">Bot activities</p>
@@ -36,7 +37,7 @@ const Bot = (props) => {
           <button className="btn btn-xs btn-purple mr-4">Edit</button>
           {/* <button className="btn btn-yellow-pale mr-4 overflow-hidden"><span className="action inline-block mx-4 bg-opacity-75">||</span><span className="btn-xs inline-block btn-yellow">pause training</span></button> */}
           {trainButton}
-          <button className="btn btn-xs btn-white-red">delete</button>
+          <button onClick={() => openModal('delete-bot')} className="btn btn-xs btn-white-red">delete</button>
         </div>
       </div>
       <div className="flex">
