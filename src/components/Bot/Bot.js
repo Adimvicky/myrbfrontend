@@ -2,8 +2,9 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import BotTable from '../BotTable/BotTable';
 import { LayoutContext } from '../Layout/Layout';
-import { CandleStickGraph } from '../Chart/Chart';
+import RatesAdvancedChart from '../RatesAdvancedChart/RatesAdvancedChart';
 import linkImg from '../../assets/img/open-external-link.svg';
+
 
 import botDetails from './bot-details.json';
 import performanceData from './performance-data.json';
@@ -50,8 +51,8 @@ const Bot = (props) => {
       </div>
       <div className="flex">
         <div className="w-3/5 flex-1 justify-between items-center mb-6 mr-10">
-          <div className="mb-8 p-20 custom-bg-dark--4">
-            <CandleStickGraph />
+          <div className="mb-8">
+            <RatesAdvancedChart />
           </div>
           <BotTable data={performanceData}/>
           <div className="mt-8">

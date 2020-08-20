@@ -1,23 +1,24 @@
 import React from 'react';
 import { Layout, LayoutContext } from '../../components/Layout/Layout';
 import Header from '../../components/Header/Header';
-import CoinRatesBar from '../../components/CoinRatesBar/CoinRatesBar';
+import RatesTickerTape from '../../components/RatesTickerTape/RatesTickerTape';
 import Hero from '../../components/Hero/Hero';
 import Feature from '../../components/Feature';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 import Footer from '../../components/Footer';
 import CryptoTable from '../../components/CryptoTable/CryptoTable';
+import RatesCryptoTable from '../../components/RatesCryptoTable/RatesCryptoTable';
 import analyticsImg from '../../assets/img/graph.svg';
 import groupImg from '../../assets/img/group.svg';
 import hourglassImg from '../../assets/img/hourglass.svg';
 import { features } from './home.module.css';
-import image from '../../assets/img/image.jpg'
+import image from '../../assets/img/image.jpg';
 
 const home = () => {
   return (
     <Layout>
       <Header />
-      <CoinRatesBar />
+      <RatesTickerTape />
       <Hero />
       <section className={`${features} px-20 py-12 flex items-center justify-between`}>
         <Feature img={analyticsImg}>
@@ -42,8 +43,8 @@ const home = () => {
         </PhotoCard>
       </section>
       <section>
-        <div className="px-20">
-          <CryptoTable />
+        <div className="px-auto">
+          <RatesCryptoTable />
         </div>
       </section>
       <Footer />

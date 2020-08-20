@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PerformanceTable from '../PerformanceTable/PerformanceTable';
-import { LineChart, CandleStickGraph } from '../Chart/Chart';
+import RatesMiniChart from '../RatesMiniChart/RatesMiniChart';
+import RatesAdvancedChart from '../RatesAdvancedChart/RatesAdvancedChart';
 
 const LiveTrader = (props) => {
   return (
@@ -12,15 +13,15 @@ const LiveTrader = (props) => {
       </div>
       <div>
         <div className="mx-auto my-8 flex -mx-20 custom-bg-dark--4">
-          <LineChart />
-          <LineChart />
-          <LineChart />
-          <LineChart />
+          <RatesMiniChart pairSymbol="FX:BTCUSD" />
+          <RatesMiniChart pairSymbol="FX:ETHUSD" />
+          <RatesMiniChart pairSymbol="FX:XRPUSD" />
+          <RatesMiniChart pairSymbol="FX:LTCUSD" />
         </div>
         <div className="flex mb-8">
-          <div className="w-3/5 flex-1 justify-between items-center mr-10 p-20 custom-bg-dark--4">
+          <div className="w-3/5 flex-1 justify-between items-center mr-10">
             <div className="w-full">
-              <CandleStickGraph />
+              <RatesAdvancedChart />
             </div>
           </div>
           <div className="flex-1 shadow-light rounded overflow-hidden" style={{maxWidth : '450px'}}>
