@@ -1,43 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9123ab49a3a614233c7654958d20509",
+    "revision": "d50f87141880630ad361dd38850ce15a",
     "url": "./index.html"
   },
   {
-    "revision": "35c2f920d22864d55012",
-    "url": "./static/css/main.d3665467.chunk.css"
+    "revision": "1a20e5e818709e528ef3",
+    "url": "./static/css/main.f982d0c2.chunk.css"
   },
   {
-    "revision": "8aa2dccef4e23ae73e25",
-    "url": "./static/js/2.7aa3fb37.chunk.js"
+    "revision": "79ea686434b14058742a",
+    "url": "./static/js/2.1ed1c012.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "./static/js/2.7aa3fb37.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.1ed1c012.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "35c2f920d22864d55012",
-    "url": "./static/js/main.7628446a.chunk.js"
+    "revision": "1a20e5e818709e528ef3",
+    "url": "./static/js/main.446e8e38.chunk.js"
   },
   {
     "revision": "ae35b828c4e77d85f183",
     "url": "./static/js/runtime-main.3b88d4ec.js"
   },
   {
-    "revision": "eb544e55332e9ad6ecfd4f632b9daa86",
-    "url": "./static/media/bg-blue-card-1.eb544e55.svg"
-  },
-  {
     "revision": "b9b385932911ddc359dbbf105ea82cba",
     "url": "./static/media/bitcoin.b9b38593.svg"
   },
   {
-    "revision": "f98046e96569ed9892a543e1e10692cc",
-    "url": "./static/media/collecting-2.f98046e9.svg"
+    "revision": "73fd9c7284f12854942582b37cb4e1cf",
+    "url": "./static/media/chart-line-solid.73fd9c72.svg"
   },
   {
-    "revision": "3d40e5d70da4de77898e91026f462853",
-    "url": "./static/media/collecting.3d40e5d7.svg"
+    "revision": "e84f70900f8b17a7cc6b9bf4658371b1",
+    "url": "./static/media/collecting.e84f7090.svg"
   },
   {
     "revision": "08e6fd25d8eb06af062c8741175f4c64",
@@ -72,16 +68,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/ic-success-alt-big.1ccede1d.svg"
   },
   {
+    "revision": "9f1ed4f48ca5cb90605bedb7f904ced4",
+    "url": "./static/media/life-bouy.9f1ed4f4.svg"
+  },
+  {
     "revision": "b061944d22abc1364f8e1353077010a0",
     "url": "./static/media/link.b061944d.svg"
+  },
+  {
+    "revision": "7d9881a1c3743b961247fada65c1e398",
+    "url": "./static/media/money_bag.7d9881a1.svg"
   },
   {
     "revision": "f42618f5f149fd5bab5821c29fbf93cb",
     "url": "./static/media/open-external-link.f42618f5.svg"
   },
   {
-    "revision": "f024a283248816c1e583c37ffdfd4e10",
-    "url": "./static/media/piggy_bank.f024a283.svg"
+    "revision": "4f48ecd1e1902f5a943f0a1bc1cbcc2c",
+    "url": "./static/media/piggy_bank.4f48ecd1.svg"
   },
   {
     "revision": "c6a0effbe867db0941bd5592f8f43810",
