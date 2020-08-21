@@ -1,20 +1,69 @@
 import React from 'react';
 import LearningMaterialsList from '../../components/LearningMaterialsList/LearningMaterialsList';
-import bots from './bots.json';
-import { botCard, search, search__icon } from './DashHome.module.css';
+
 import { Link } from 'react-router-dom';
 import searchImg from '../../assets/img/search-solid.svg';
+
+import bots from './bots.json';
+
 import piggyImg from '../../assets/img/piggy_bank.svg'
 import collectingImg from '../../assets/img/collecting.svg';
-import collectingImg2 from '../../assets/img/collecting-2.svg';
-let botCardImages = [piggyImg, collectingImg, collectingImg2];
+import moneyBagImg from '../../assets/img/money_bag.svg';
+
+import { botCard,
+  botCardYellow, botCardBlue, botCardGreen, botCardPurple, botCardRed,
+  filterBlue,filterPurple,filterYellow,filterGreen, filterRed } from './DashHome.module.css';
 
 const BotCard = ({ bot }) => {
-  console.log(bot.color);
+  let botCardFilterColor = () => {
+    switch(bot.color){
+      case 'purple':
+        return filterPurple;
+      case 'blue':
+        return filterBlue;
+      case 'yellow':
+        return filterYellow;
+      case 'green':
+        return filterGreen;
+      case 'red':
+        return filterRed;
+      default:
+        return filterYellow;
+    }
+  }
+  let botCardImg = () => {
+    switch(bot.icon){
+      case 'collecting':
+        return collectingImg;
+      case 'piggy':
+        return piggyImg;
+      case 'moneyBag':
+        return moneyBagImg;
+      default:
+        return piggyImg;
+    }
+  }
+  let botCardColor = () => {
+    switch(bot.color){
+      case 'purple':
+        return botCardPurple;
+      case 'blue':
+        return botCardBlue;
+      case 'yellow':
+        return botCardYellow;
+      case 'green':
+        return botCardGreen;
+      case 'red':
+        return botCardRed;
+      default:
+        return botCardYellow;
+    }
+  }
+
   return (
     <Link to="/dashboard/bot">
-    <div className={`${botCard} p-5 flex items-center mb-4`}>
-      <img src={piggyImg} className="mr-4"/>
+    <div className={`${botCard} ${botCardColor()} p-5 flex items-center mb-4`}>
+      <img src={botCardImg()} className={`mr-4 ${botCardFilterColor()}`}/>
       <div>
         <h5 className="text-dark-500 h5">{bot.name}</h5>
         <p className="text-dark-500 text-xs text-opacity-75">{bot.tradingPair} </p>

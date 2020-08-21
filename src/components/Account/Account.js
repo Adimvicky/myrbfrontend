@@ -91,15 +91,15 @@ function SecuritySettings(props){
     <form className="">
       <div className="mb-5">
         <label className="block mb-2">Old password</label>
-        <input type="password" className="input" placeholder="name@domain.com"></input>
+        <input type="password" className="input" placeholder=""></input>
       </div>
       <div className="mb-5">
         <label className="block mb-2">New password</label>
-        <input type="password" className="input" placeholder="name@domain.com"></input>
+        <input type="password" className="input" placeholder="Enter password"></input>
       </div>
       <div className="mb-8">
         <label className="block mb-2">New password</label>
-        <input type="password" className="input" placeholder="name@domain.com"></input>
+        <input type="password" className="input" placeholder="Enter password"></input>
       </div>
       <div>
         <button className="btn btn-purple btn-xs">change password</button>
@@ -109,17 +109,35 @@ function SecuritySettings(props){
 }
 
 function Integrations(props){
+  let integrations = [
+    {
+      name : 'Binance',
+      username : 'Username'
+    },
+    {
+      name : 'Binance',
+      username : 'Username'
+    },
+  ]
   return (
     <div>
       <div className="b-b-lighter--2 -mx-6 p-6">
         <h5 className="text-base mb-4">Active exchanges</h5>
         <div>
-          <button className="btn btn-xs bg-gray-200 mr-4 overflow-hidden text-dark-200">
-            <span className="action inline-block mx-4 bg-opacity-75">
-              <img src={linkImg} width="15px" height="15px"/>
-            </span>
-            <span className="inline-block text-dark-200">BINANCE</span>
-          </button>
+          {
+            integrations.map(integration => (
+              <button className="btn btn-xs bg-gray-200 mr-4 mb-2 overflow-hidden text-dark-200 flex items-center integration-btn" style={{display:"flex",padding:0,backgroundColor:'#D7D7D8'}}>
+                <span className="py-2 px-4 action inline-block bg-opacity-75">
+                  <img src={linkImg} width="15px" height="15px"/>
+                </span>
+                <span className="py-2 pl-2 px-4 inline-block text-dark-200" style={{backgroundColor:'#E0E1E2'}}>
+                  {integration.name}
+                  <span className="lowercase"> ({integration.username})</span>
+                </span>
+                <button className="integration-delete">delete</button>
+              </button>
+            ))
+          }
         </div>
 
       </div>

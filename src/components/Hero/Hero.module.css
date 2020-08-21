@@ -3,8 +3,10 @@
   height: 550px;
 }
 
+
 .hero div {
-  width: 456px;
+  max-width: 456px;
+  min-width : 355px;
 }
 
 .hero__illustration,
@@ -35,4 +37,10 @@
   width: 170px;
   position: absolute;
   opacity: 1;
+}
+
+@media only screen and (max-width:640px){
+  .hero {
+    height: 480px;
+  }
 }

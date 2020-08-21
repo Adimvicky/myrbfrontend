@@ -4,6 +4,8 @@ import { Link, NavLink } from 'react-router-dom';
 import profileImg from '../../assets/img/ic-profile.svg';
 import dashImg from '../../assets/img/ic-dash.svg';
 import accountImg from '../../assets/img/ic-my-account.svg';
+import chartImg from '../../assets/img/chart-line-solid.svg';
+import lifeBouyImg from '../../assets/img/life-bouy.svg';
 import { header } from './DashHeader.module.css';
 
 let user = {
@@ -40,13 +42,13 @@ const DashHeader = (props) => {
           </li>
           <li className="flex items-center mr-12">
             <NavLink to="/dashboard/trader" activeClassName="active-dot" className="flex items-center">
-              <img className="mr-3" src={dashImg}></img>
+              <img className="mr-3" src={chartImg} width="18" height="20"></img>
               <span>Live trader</span>
             </NavLink>
           </li>
           <li className="flex items-center mr-12">
             <NavLink to="/dashboard/how" activeClassName="active-dot" className="flex items-center">
-              <img className="mr-3" src={profileImg}></img>
+              <img className="mr-3" src={lifeBouyImg}></img>
               <span>How-to</span>
             </NavLink>
           </li>

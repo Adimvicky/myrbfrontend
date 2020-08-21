@@ -342,3 +342,40 @@ iframe {
   margin-right: auto;
   margin-left: auto;
 }
+
+
+.integration-btn {
+  position: relative;
+}
+.integration-btn .integration-delete {
+  display: none;
+
+  background: #FF6A6A;
+  color: #fff;
+  font-size: 12px;
+  padding: 1px 4px;
+  position: absolute;
+  right : 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+}
+.integration-btn:hover .integration-delete {
+  display: inline-block;
+}
+
+
+
+
+/* Tailwind dimensions overwrites at breakpoints */
+@media only screen and (max-width:769px){
+  .px-20 {
+    padding-left : 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .px-20 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

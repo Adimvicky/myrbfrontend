@@ -19,7 +19,7 @@ const RatesCryptoTable = (props) => {
         "locale": "en"
       }`
     widgetRef.current.appendChild(script);
-  });
+  },[]);
 
   return (
     <div class="tradingview-widget-container mx-auto mb-8" ref={widgetRef}>

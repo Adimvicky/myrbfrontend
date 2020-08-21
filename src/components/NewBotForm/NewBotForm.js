@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { formCard } from './NewBotForm.module.css';
 import { Link, Switch, Route } from 'react-router-dom';
 import { LayoutContext } from '../Layout/Layout';
+import piggyImg from '../../assets/img/piggy_bank.svg';
 
 
 const NewBotForm1 = (props) => {
@@ -94,16 +95,18 @@ const NewBotForm2 = (props) => {
             <label className="block mb-2">Select colour identifier</label>
             <select className="input">
               <option className="colour-id colour-id-blue">Blue</option>
-              <option>option 2</option>
-              <option>option 3</option>
+              <option>Yellow</option>
+              <option>Red</option>
+              <option>Purple</option>
+              <option>Green</option>
             </select>
           </div>
           <div className="mr-4 flex-grow">
             <label className="block mb-2">Select icon</label>
             <select className="input">
               <option>Piggy bank</option>
-              <option>option 2</option>
-              <option>option 3</option>
+              <option>Collecting</option>
+              <option>Money bag</option>
             </select>
           </div>
         </div>
