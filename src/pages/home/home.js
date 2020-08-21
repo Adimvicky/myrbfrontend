@@ -20,7 +20,7 @@ const home = () => {
       <Header />
       <RatesTickerTape />
       <Hero />
-      <section className={`${features} px-20 py-12 flex items-center justify-between`}>
+      <section className={`${features} px-5 lg:px-20 py-6 md:py-12 flex flex-col sm:flex-row items-center justify-between`}>
         <Feature img={analyticsImg}>
           The quick, brown fox jumps over a lazy dog. DJs flock by when.
         </Feature>
@@ -31,14 +31,14 @@ const home = () => {
           The quick, brown fox jumps over a lazy dog. DJs flock by when.
         </Feature>
       </section>
-      <section className={`px-20 my-24 flex items-center justify-between`}>
-        <PhotoCard img={image} className="custom-bg-dark">
+      <section className={`px-5 lg:px-20  my-6 sm:my-24 flex flex-col sm:flex-row items-center justify-between`}>
+        <PhotoCard img={image} className="custom-bg-dark mb-4 sm:mr-2">
           The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz
         </PhotoCard>
-        <PhotoCard img={image} className="custom-bg-red">
+        <PhotoCard img={image} className="custom-bg-red mb-4 sm:mr-2">
           The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz
         </PhotoCard>
-        <PhotoCard img={image} className="custom-bg-purple">
+        <PhotoCard img={image} className="custom-bg-purple mb-4 sm:mr-2">
           The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz
         </PhotoCard>
       </section>

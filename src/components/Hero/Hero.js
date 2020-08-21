@@ -15,7 +15,7 @@ const Hero = () => {
           Junk MTV quiz graced by fox whelps. Bawds jog
         </p>
         <div>
-          <button onClick={() => openModal('signup')} className="btn btn-lg btn-green mr-4 mb-2">Get started</button>
+          <button onClick={() => openModal('signup')} className="btn btn-lg btn-green mr-2 sm:mr-4 mb-2">Get started</button>
           <Link to="/about" className="btn btn-lg btn-dark mb-2">Learn more</Link>
         </div>
       </div>

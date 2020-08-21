@@ -8,7 +8,19 @@
   height: 84px;
   border-radius: 8px;
 }
-
 .card p {
   width : 214px;
+}
+
+@media only screen and (max-width : 768px){
+  .card {
+    padding : 25px 12px;
+  }
+  /* .card img {
+    width : 56px;
+    height: 56px;
+  } */
+  .card p {
+    width : 190px
+  }
 }
