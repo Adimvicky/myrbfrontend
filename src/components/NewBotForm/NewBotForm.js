@@ -22,8 +22,8 @@ const NewBotForm1 = (props) => {
             <option>Arch 3</option>
           </select>
         </div>
-        <div className="mb-5 flex">
-          <div className="mr-4 flex-grow">
+        <div className="mb-0 sm:mb-5 flex flex-col sm:flex-row">
+          <div className="sm:mr-4 flex-grow mb-5 sm:mb-0">
             <label className="block mb-2">Trading pair</label>
             <select className="input">
               <option>ETH/BTC</option>
@@ -31,13 +31,13 @@ const NewBotForm1 = (props) => {
               <option>option 3</option>
             </select>
           </div>
-          <div className="flex-grow">
+          <div className="flex-grow mb-5 sm:mb-0">
             <label className="block mb-2">Action Type</label>
             <input className="input" value="DQN"></input>
           </div>
         </div>
-        <div className="mb-5 flex">
-          <div className="mr-4 flex-grow">
+        <div className="sm:mb-5 flex flex-col sm:flex-row">
+          <div className="sm:mr-4 flex-grow mb-5 sm:mb-0">
             <label className="block mb-2">Layer type</label>
             <select className="input">
               <option>MLP</option>
@@ -45,7 +45,7 @@ const NewBotForm1 = (props) => {
               <option>option 3</option>
             </select>
           </div>
-          <div className="flex-grow">
+          <div className="flex-grow mb-5 sm:mb-0">
             <label className="block mb-2">Layers</label>
             <input className="input" placeholder="Enter your bot name"></input>
           </div>
@@ -69,13 +69,13 @@ const NewBotForm2 = (props) => {
       <form>
         <div className="mb-5">
           <label className="block mb-2">Cryptos</label>
-          <div className="flex items-center justify-start">
-            <span className="mr-5 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">ETH-BTC</span></span>
-            <span className="mr-5 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">XRP-ETH</span></span>
-            <span className="mr-5 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">BCH-USD</span></span>
-            <span className="mr-5 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">XRP-USD</span></span>
-            <span className="mr-5 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">BCH-USD</span></span>
-            <span className="mr-5 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">XRP-USD</span></span>
+          <div className="flex flex-wrap items-center justify-start">
+            <span className="mr-5 mb-2 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">ETH-BTC</span></span>
+            <span className="mr-5 mb-2 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">XRP-ETH</span></span>
+            <span className="mr-5 mb-2 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">BCH-USD</span></span>
+            <span className="mr-5 mb-2 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">XRP-USD</span></span>
+            <span className="mr-5 mb-2 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">BCH-USD</span></span>
+            <span className="mr-5 mb-2 flex items-center"><input type="checkbox"></input> <span className="ml-2 lh-0">XRP-USD</span></span>
           </div>
         </div>
         <div className="mb-5">
@@ -90,8 +90,8 @@ const NewBotForm2 = (props) => {
           <label className="block mb-2">Others</label>
           <input className="input" placeholder=""></input>
         </div>
-        <div className="mb-5 flex">
-          <div className="mr-4 flex-grow">
+        <div className="mb-5 flex flex-col sm:flex-row">
+          <div className="mr-0 sm:mr-4 flex-grow mb-5 sm:mb-0">
             <label className="block mb-2">Select colour identifier</label>
             <select className="input">
               <option className="colour-id colour-id-blue">Blue</option>
@@ -101,7 +101,7 @@ const NewBotForm2 = (props) => {
               <option>Green</option>
             </select>
           </div>
-          <div className="mr-4 flex-grow">
+          <div className="mr-0 sm:mr-4 flex-grow">
             <label className="block mb-2">Select icon</label>
             <select className="input">
               <option>Piggy bank</option>
@@ -110,9 +110,9 @@ const NewBotForm2 = (props) => {
             </select>
           </div>
         </div>
-        <div className="text-right mt-5">
+        <div className="text-center sm:text-right mt-5">
           <Link to="/dashboard/new-bot" className="btn btn-purple-outline btn-xs">Go back</Link>
-          <button type="button" onClick={() => openModal('bot-creation-success')} className="btn btn-purple btn-xs inline-block ml-4">Make me money</button>
+          <button type="button" onClick={() => openModal('bot-creation-success')} className="btn btn-purple btn-xs inline-block ml-2 sm:ml-4">Make me money</button>
         </div>
       </form>
     </div>

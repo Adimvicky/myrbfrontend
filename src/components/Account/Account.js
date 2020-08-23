@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, Switch, Route } from 'react-router-dom';
 import linkImg from '../../assets/img/link.svg';
 
 const Account = (props) => {
@@ -24,33 +24,25 @@ const Account = (props) => {
     }
   }
 
-  const ComponentInView = () => {
-    switch(pathname){
-      case subRoutes.profile:
-        return <ProfileUpdate />
-      case subRoutes.security:
-        return <SecuritySettings />
-      case subRoutes.integrations:
-        return <Integrations />
-      default:
-        return null
-    }
-  }
   return (
     <div className={`bg-grey-100 px-20 py-12 text-dark-200`}>
       <p className="text-dark-200 mb-4 text-13">My account</p>
       <div className="flex justify-between items-center mb-6">
       <h3 className="h3 text-dark-300">{headerText()}</h3>
       </div>
-      <div className="flex">
-        <nav className="mr-10 flex flex-col items-start">
-          <NavLink exact to={subRoutes.profile} activeClassName="text-dark-700 bg-white" className="p-4 py-3 w-56 mb-4">My profile</NavLink>
-          <NavLink to={subRoutes.security} activeClassName="text-dark-700 bg-white" className="p-4 py-3 w-56 mb-4">Security</NavLink>
-          <NavLink to={subRoutes.integrations} activeClassName="text-dark-700 bg-white" className="p-4 py-3 w-56 mb-4">Integrations</NavLink>
-          <button className="mt-auto p-4">Log out</button>
+      <div className="flex items-center flex-col sm:flex-row sm:items-stretch">
+        <nav className="flex flex-row sm:flex-col sm:mr-10 items-start text-center sm:text-left whitespace-no-wrap">
+          <NavLink exact to={subRoutes.profile} activeClassName="text-dark-700 bg-white" className="p-3 sm:p-4 py-3 w-24 sm:w-56 mb-4">My profile</NavLink>
+          <NavLink to={subRoutes.security} activeClassName="text-dark-700 bg-white" className="p-3 sm:p-4 py-3 w-24 sm:w-56 mb-4">Security</NavLink>
+          <NavLink to={subRoutes.integrations} activeClassName="text-dark-700 bg-white" className="p-3 sm:p-4 pr-6 py-3 w-32 sm:w-56 mb-4">Integrations</NavLink>
+          <button className="sm:mt-auto p-4 hidden sm:inline-block">Log out</button>
         </nav>
-        <div className="w-4/6 p-6 bg-grey-200 text-13 text-dark-200 rounded shadow-light" style={{minHeight : "500px", maxWidth:"420px"}}>
-          {ComponentInView()}
+        <div className="w-full sm:w-4/6 p-6 bg-grey-200 text-13 text-dark-200 rounded shadow-light" style={{minHeight : "500px", maxWidth:"420px"}}>
+          <Switch>
+            <Route path={subRoutes.security} component={SecuritySettings}></Route>
+            <Route path={subRoutes.integrations} component={Integrations}></Route>
+            <Route path={subRoutes.profile} component={ProfileUpdate}></Route>
+          </Switch>
         </div>
       </div>
     </div>

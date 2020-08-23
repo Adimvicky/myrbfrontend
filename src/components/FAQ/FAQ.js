@@ -7,8 +7,8 @@ const FAQ = () => {
   return (
     <section className={`${container} px-20 py-16`}>
       <h2 className="h2">Frequently Asked Questions</h2>
-      <div className="flex justify-between text-dark-200 mt-8">
-        <div className="flex-1 bg-white p-6 mr-6">
+      <div className="flex flex-col md:flex-row justify-between text-dark-200 mt-8">
+        <div className="flex-1 bg-white p-6 md:mr-6 mb-10">
           {
             faqs.map(faq => (
               <>
@@ -25,7 +25,7 @@ const FAQ = () => {
             ))
           }
         </div>
-        <div className="flex-1 bg-white p-6">
+        <div className="flex-1 bg-white p-6 mb-10">
         {
             faqs.map(faq => (
               <>

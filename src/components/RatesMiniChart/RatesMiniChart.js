@@ -11,15 +11,13 @@ const RatesMiniChart = (props) => {
     script.innerHTML = `
       {
         "symbol": "${props.pairSymbol}",
-        "width": 336,
-        "height": 240,
         "locale": "en",
         "dateRange": "1m",
         "colorTheme": "dark",
         "trendLineColor": "#2F185C",
         "underLineColor": "rgba(255, 255, 255, 0.08)",
         "isTransparent": true,
-        "autosize": false,
+        "autosize": true,
         "largeChartUrl": ""
       }`
 
@@ -28,7 +26,7 @@ const RatesMiniChart = (props) => {
 
   return (
     <div class="tradingview-widget-container custom-bg-dark--4" ref={widgetRef}>
-      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-container__widget" id="trading-rates-widget"></div>
     </div>
   )
 }

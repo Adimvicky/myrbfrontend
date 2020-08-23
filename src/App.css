@@ -77,6 +77,7 @@ body {
   box-shadow: 0px 3px 6px #00000029;
   color: var(--color-white);
   display: inline-block;
+  white-space: nowrap;
 }
 
 button:focus, button:active {
@@ -183,6 +184,14 @@ tr.b-b-lighter:last-child {
   border-bottom : none;
 }
 
+.how-to-border {
+  border-right : 2px solid #ebebeb;
+}
+@media screen and (max-width:640px){
+  .how-to-border {
+    border-right: none;
+  }
+}
 /* Zero padding for first child in list */
 .first-no-pl:first-child {
   padding-left : 0;
@@ -211,23 +220,29 @@ tr.b-b-lighter:last-child {
   color: var(--unnamed-color-646a86);
 }
 
-.active-dot {
+.active-dot, .mobile-active {
   position : relative;
   color : var(--unnamed-color-6E28B4);
 }
-.active-dot::after {
+.active-dot::after, .mobile-active::after {
   content : "";
   position : absolute;
-  bottom: -16px;
-  left: 48%;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--unnamed-color-6E28B4);
 }
-.active-dot img {
+.active-dot::after {
+  bottom: -16px;
+  left: 48%;
+}
+.mobile-active::after {
+  right : -20%;
+}
+.active-dot img, .mobile-active img {
   filter: invert(18%) sepia(55%) saturate(4548%) hue-rotate(264deg) brightness(86%) contrast(54%);
 }
+
 
 .custom-bg-dark--2 .active-dot img {
   filter : invert(56%) sepia(47%) saturate(3960%) hue-rotate(237deg) brightness(99%) contrast(104%);
@@ -309,6 +324,11 @@ select option {
 .dash-body {
   margin-top : 120px;
 }
+@media only screen and (max-width:640px){
+  .dash-body {
+    margin-top : 65px;
+  }
+}
 .fixed-top {
   position: fixed;
   top: 0;
@@ -316,7 +336,9 @@ select option {
   left: 0;
   z-index: 500;
 }
-
+.filter-white {
+  filter : invert(100%) sepia(0%) saturate(11%) hue-rotate(188deg) brightness(116%) contrast(101%);
+}
 
 
 /* FAQ Accordion styles */
@@ -374,7 +396,7 @@ iframe {
 
 
 /* Tailwind dimensions overwrites at breakpoints */
-@media only screen and (max-width:769px){
+@media only screen and (max-width:790px){
   .px-20 {
     padding-left : 2.5rem;
     padding-right: 2.5rem;
@@ -393,4 +415,51 @@ iframe {
   .b-l {
     border : none;
   }
+}
+
+/* Trading view candlestick responsive */
+#tradingview_89121 {
+  width: 694px;
+  height: 287px;
+}
+
+@media only screen and (max-width:790px){
+  #tradingview_89121 {
+    width : 630px;
+  }
+}
+@media only screen and (max-width:640px){
+  #tradingview_89121 {
+    width : 580px;
+  }
+}
+@media only screen and (max-width:600px){
+  #tradingview_89121 {
+    width : 500px;
+  }
+}
+@media only screen and (max-width:520px){
+  #tradingview_89121 {
+    width : 400px;
+  }
+}
+@media only screen and (max-width:410px){
+  #tradingview_89121 {
+    width : 360px;
+  }
+}
+
+/* Overflow scroll bars */
+::-webkit-scrollbar {
+  width:5px;
+}
+* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 4px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0C031D;
+  border-radius: 4px;
 }

@@ -12,19 +12,20 @@ const LiveTrader = (props) => {
         <h3 className="h3"> <Link to="/dashboard">&larr;</Link> <span>Live Trader</span></h3>
       </div>
       <div>
-        <div className="mx-auto my-8 flex -mx-20 custom-bg-dark--4">
+        <div className="overflow-x-auto mx-auto my-8 flex -mx-20 custom-bg-dark--4">
           <RatesMiniChart pairSymbol="FX:BTCUSD" />
           <RatesMiniChart pairSymbol="FX:ETHUSD" />
           <RatesMiniChart pairSymbol="FX:XRPUSD" />
           <RatesMiniChart pairSymbol="FX:LTCUSD" />
+          <RatesMiniChart pairSymbol="FX:LTCUSD" />
         </div>
-        <div className="flex mb-8">
-          <div className="w-3/5 flex-1 justify-between items-center mr-10">
+        <div className="flex flex-wrap mb-6">
+          <div className="mt-4 w-3/5 flex-1 justify-between items-center mr-10">
             <div className="w-full">
               <RatesAdvancedChart />
             </div>
           </div>
-          <div className="flex-1 shadow-light rounded overflow-hidden" style={{maxWidth : '450px'}}>
+          <div className="mt-4 shadow-light rounded overflow-hidden" style={{minWidth : '355px',maxWidth : '450px'}}>
             <div className="w-full text-dark-200">
               <div className="custom-bg-dark--4 p-6">
                 Bot details
@@ -60,7 +61,7 @@ const LiveTrader = (props) => {
           </div>
         </div>
         </div>
-        <div>
+        <div className="overflow-x-auto">
           <h4 className="text-base text-white mb-6">Trading Performance</h4>
           <PerformanceTable />
         </div>

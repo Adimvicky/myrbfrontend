@@ -21,6 +21,11 @@
   width: 424px;
   overflow: hidden;
 }
+@media only screen and (max-width:640px){
+  .modal {
+    max-width: 350px;
+  }
+}
 .modalWhite {
   background: #ffff;
 }

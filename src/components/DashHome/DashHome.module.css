@@ -8,7 +8,18 @@
   background-position: bottom;
   font-size : 13px;
 }
+.learningMaterials {
+  max-width : 380px;
+}
 
+@media only screen and (max-width:768px){
+  .botCard {
+    width : 260px;
+  }
+  .learningMaterials {
+    max-width: none;
+  }
+}
 
 
 .search {

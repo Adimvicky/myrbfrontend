@@ -13,8 +13,7 @@ const RatesMiniChart = (props) => {
       console.log("HDJSDA");
       new TradingView.widget(
         {
-        width : "694px",
-        height: "510px",
+        "autosize":true,
         "symbol": "KRAKEN:ETHUSD",
         "interval": "D",
         "timezone": "Etc/UTC",

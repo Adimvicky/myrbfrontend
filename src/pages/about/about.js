@@ -10,7 +10,7 @@ const About = () => {
     <Layout>
       <Header bordered="true"/>
         <div className={container}>
-          <div className={`${header} px-20 pt-40 pb-20`}>
+          <div className={`${header} px-20 pt-16 md:pt-20 lg:pt-40 pb-20`}>
             <h1 className="h1 mb-10">About MYRB</h1>
             <p>The quick, brown fox jumps over a lazy dog. DJs flock by when</p>
           </div>
